@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Vazirmatn;
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(--dark-magenta);
+}
+
+*::placeholder {
+    color: white !important;
+}
+
+:root {
+    --dark-magenta: #7B74FF;
+}
+
+/* loader */
+
+.loader span {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    border-radius: 100%;
+    background-color: white;
+}
+
+.loader span:nth-child(1) {
+    left: 0.5rem;
+    animation: circle_1 0.5s infinite;
+}
+
+.loader span:nth-child(2) {
+    left: 0.5rem;
+    animation: circle_2 0.5s infinite;
+}
+
+.loader span:nth-child(3) {
+    left: 2rem;
+    animation: circle_2 0.5s infinite;
+}
+
+.loader span:nth-child(4) {
+    left: 3.5rem;
+    animation: circle_3 0.5s infinite;
+}
+
+@keyframes circle_1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes circle_2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(25px, 0);
+    }
+}
+
+@keyframes circle_3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+/* loader */
+
+.disable-scroll-bar {
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+.menu-li:hover>ul {
+    display: flex !important;
+}
+
+.search-box {
+    transition: width 0.25s linear !important;
+}
+
+.search-box:hover {
+    width: 200px !important;
+    transition: width 0.25s linear;
+}
+
+.search-box>input::placeholder {
+    color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--dark-magenta) !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 1rem !important;
+    transition: width 0.25s linear !important;
+    border-radius: 5px !important;
+    background-color: var(--dark-magenta) !important;
+}
+
+main section:nth-of-type(2)>div>div:first-of-type {
+    grid-area: 1 / 2 / 3 / 3 !important;
+}
+
+.airpods-title::selection {
+    display: none;
+}
+
+.product-box:hover .off-icon {
+    opacity: 1 !important;
+    transition: opacity 0.5s !important;
+}
+
+.product-box>div:first-of-type>img:last-of-type {
+    transition: all 0.5s;
+}
+
+.product-box:hover>div:first-of-type>img:last-of-type {
+    transform: scale(1.25) rotate(20deg);
+    transition: all 0.5s;
+}
+
+.special-sale-box {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), white);
+}
+
+.headphone-box {
+    background-image: linear-gradient(45deg, var(--dark-magenta), white);
+}
+
+.watch-box {
+    background-image: linear-gradient(45deg, red, white);
+}
+
+.basket:hover,
+.save:hover {
+    transition: all 0.25s !important;
+    background-color: white !important;
+}
+
+.basket:hover i,
+.save:hover i {
+    transition: all 0.25s !important;
+    color: #40479E !important;
+}
+
+.latest-news-box>div:first-of-type>img {
+    transition: all 0.5s;
+}
+
+.latest-news-box:hover>div:first-of-type>img {
+    transform: scale(1.25);
+    transition: all 0.5s;
+}
+
+.quick-links>a:hover {
+    transition-duration: 0.25s !important;
+    color: var(--dark-magenta) !important;
+}
